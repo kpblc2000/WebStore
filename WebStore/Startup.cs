@@ -45,14 +45,20 @@ namespace WebStore
       //var greet = Configuration["Greetings"];
       app.UseEndpoints(endpoints =>
       {
-        endpoints.MapGet("/g", async context =>
-        {
-          await context.Response.WriteAsync("g");
-        });
+        //endpoints.MapGet("/g", async context =>
+        //{
+        //  await context.Response.WriteAsync("g");
+        //});
         endpoints.MapGet("/", async context =>
               {
             await context.Response.WriteAsync(Configuration["Greetings"]);
           });
+
+        endpoints.MapControllerRoute(
+          "default",
+          "{controller}/{action}/{id}"
+          );
+
       });
     }
   }
