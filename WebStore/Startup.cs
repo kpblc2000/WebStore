@@ -49,14 +49,15 @@ namespace WebStore
         //{
         //  await context.Response.WriteAsync("g");
         //});
-        endpoints.MapGet("/", async context =>
-              {
-            await context.Response.WriteAsync(Configuration["Greetings"]);
-          });
+
+        //endpoints.MapGet("/", async context =>
+        //      {
+        //    await context.Response.WriteAsync(Configuration["Greetings"]);
+        //  });
 
         endpoints.MapControllerRoute(
           "default",
-          "{controller}/{action}/{id}"
+          "{controller=Home}/{action=Index}/{id?}"
           );
 
       });
