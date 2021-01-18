@@ -11,6 +11,10 @@ namespace WebStore.Models
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string Patronymic { get; set; }
-    public int YearBirst { get; set; }
+    public int YearBirth { get; set; }
+    public int StartWorkYear { get; set; }
+    public string Post { get; set; }
+    public string FullName => $"{LastName} {FirstName} {Patronymic}";
+    public int Age => DateTime.Now.Year - YearBirth;
   }
 }

@@ -59,7 +59,10 @@ namespace WebStore
           "default",
           "{controller=Home}/{action=Index}/{id?}"
           );
-
+        endpoints.MapControllerRoute(
+          "emplbyid",
+          "{controller=EmployeeFull}/{action=Index}/{id}"
+          );
       });
     }
   }

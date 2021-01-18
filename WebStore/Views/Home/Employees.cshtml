@@ -12,13 +12,16 @@
 
   <h3>Сотрудники</h3>
 
-  <table>
-    <thead>
-      <tr>#</tr>
-      <tr>Фамилия</tr>
-      <tr>Имя</tr>
-      <tr>Отчество</tr>
-      <tr>Год рожд.</tr>
+  <table style="border-collapse:collapse;" border="1">
+    <thead >
+      <tr>
+        <td>#</td>
+        <td>Фамилия</td>
+        <td>Имя</td>
+        <td>Отчество</td>
+        <td>Возраст</td>
+        <td>Подробнее</td>
+      </tr>
     </thead>
     <tbody>
       @foreach (var empl in Model)
@@ -28,7 +31,7 @@
           <td>@empl.LastName</td>
           <td>@empl.FirstName</td>
           <td>@empl.Patronymic</td>
-          <td>@empl.YearBirst</td>
+          <td>@empl.Age</td>
         </tr>
       }
     </tbody>
