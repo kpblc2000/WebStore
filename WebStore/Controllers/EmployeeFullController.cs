@@ -10,14 +10,12 @@ namespace WebStore.Controllers
   public class EmployeeFullController : Controller
   {
 
-    private Employee employee;
+    private Employee _Employee;
 
-    public IActionResult Index()
+    public IActionResult Index(int EmployeeId)
     {
-      return View();
+      _Employee = HomeController.EmployeesData.Where(item => item.Id == EmployeeId).FirstOrDefault();
+      return View("EmployeeFull", _Employee);
     }
-
-
-
   }
 }

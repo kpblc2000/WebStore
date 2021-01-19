@@ -14,6 +14,8 @@ namespace WebStore.Controllers
       new Employee { Id = 1, FirstName = "f3", LastName = "l3", Patronymic = "p3", YearBirth = 1989, Post = "Technical", StartWorkYear = 2019 },
     };
 
+    public static List<Employee> EmployeesData => _Employees;
+
     public IActionResult Index()
     {
       //return View();
